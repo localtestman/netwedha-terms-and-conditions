@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NetWedha – Terms & Conditions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0b0f1a;
+      --surface: #131929;
+      --border: #1e2d45;
+      --accent: #00c2ff;
+      --accent2: #0077b6;
+      --text: #e4eaf4;
+      --muted: #7a8faa;
+      --danger: #ff6b6b;
+      --warning: #ffd166;
+      --success: #06d6a0;
+      --radius: 12px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', 'Noto Sans Sinhala', sans-serif;
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0b0f1a 0%, #0d1b33 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 48px 24px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      top: -60px; left: 50%; transform: translateX(-50%);
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(0,194,255,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .logo-mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .logo-icon {
+      width: 44px; height: 44px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px;
+    }
+    .logo-text {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: var(--text);
+    }
+    .logo-text span { color: var(--accent); }
+    h1 {
+      font-size: clamp(26px, 5vw, 40px);
+      font-weight: 700;
+      letter-spacing: -1px;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+    h1 em {
+      font-style: normal;
+      background: linear-gradient(90deg, var(--accent), #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .subtitle { color: var(--muted); font-size: 14px; margin-top: 8px; }
+    .badge {
+      display: inline-block;
+      background: rgba(0,194,255,0.1);
+      border: 1px solid rgba(0,194,255,0.3);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 99px;
+      margin-top: 16px;
+      letter-spacing: 0.5px;
+    }
+
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      margin-bottom: 40px;
+    }
+    .toc h2 {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--accent);
+      margin-bottom: 14px;
+    }
+    .toc ol {
+      padding-left: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 24px;
+    }
+    @media(max-width:500px){ .toc ol { grid-template-columns: 1fr; } }
+    .toc a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 13px;
+      transition: color .2s;
+      cursor: pointer;
+    }
+    .toc a:hover { color: var(--accent); }
+
+    section {
+      margin-bottom: 44px;
+    }
+    section h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    section h2 .icon {
+      width: 32px; height: 32px;
+      background: rgba(0,194,255,0.1);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+    p { margin-bottom: 14px; color: var(--text); }
+    p:last-child { margin-bottom: 0; }
+
+    .info-box {
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin: 16px 0;
+      font-size: 14px;
+    }
+    .info-box.warning {
+      background: rgba(255,209,102,0.08);
+      border: 1px solid rgba(255,209,102,0.25);
+      color: var(--warning);
+    }
+    .info-box.danger {
+      background: rgba(255,107,107,0.08);
+      border: 1px solid rgba(255,107,107,0.25);
+      color: var(--danger);
+    }
+    .info-box.info {
+      background: rgba(0,194,255,0.07);
+      border: 1px solid rgba(0,194,255,0.2);
+      color: var(--accent);
+    }
+    .info-box.success {
+      background: rgba(6,214,160,0.07);
+      border: 1px solid rgba(6,214,160,0.2);
+      color: var(--success);
+    }
+    .info-box strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    ul.policy-list {
+      padding-left: 0;
+      list-style: none;
+      display: grid;
+      gap: 8px;
+      margin: 12px 0;
+    }
+    ul.policy-list li {
+      padding-left: 22px;
+      position: relative;
+      font-size: 14px;
+      color: var(--text);
+    }
+    ul.policy-list li::before {
+      content: '›';
+      position: absolute;
+      left: 6px;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .do-dont {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 16px 0;
+    }
+    @media(max-width:500px){ .do-dont { grid-template-columns: 1fr; } }
+    .do-card, .dont-card {
+      border-radius: 10px;
+      padding: 18px;
+    }
+    .do-card {
+      background: rgba(6,214,160,0.07);
+      border: 1px solid rgba(6,214,160,0.2);
+    }
+    .dont-card {
+      background: rgba(255,107,107,0.07);
+      border: 1px solid rgba(255,107,107,0.2);
+    }
+    .do-card h4 { color: var(--success); font-size: 13px; margin-bottom: 10px; }
+    .dont-card h4 { color: var(--danger); font-size: 13px; margin-bottom: 10px; }
+    .do-card li, .dont-card li {
+      font-size: 13px;
+      list-style: none;
+      padding: 4px 0 4px 18px;
+      position: relative;
+      color: var(--text);
+    }
+    .do-card li::before { content: '✓'; position: absolute; left: 0; color: var(--success); font-weight: 700; }
+    .dont-card li::before { content: '✕'; position: absolute; left: 0; color: var(--danger); font-weight: 700; }
+
+    .contact-card {
+      background: linear-gradient(135deg, rgba(0,194,255,0.07), rgba(167,139,250,0.07));
+      border: 1px solid rgba(0,194,255,0.2);
+      border-radius: var(--radius);
+      padding: 28px;
+      text-align: center;
+    }
+    .contact-card h3 { font-size: 18px; margin-bottom: 8px; }
+    .contact-card a { color: var(--accent); text-decoration: none; font-weight: 600; }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+      padding: 32px 24px;
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-mark">
+    <div class="logo-icon">📡</div>
+    <span class="logo-text">Net<span>Wedha</span></span>
+  </div>
+  <h1>Terms &amp; <em>Conditions</em></h1>
+  <p class="subtitle">සේවා කොන්දේසි · Terms and Conditions</p>
+  <span class="badge">Version 2.03.1 · Effective June 2025</span>
+</header>
+
+<div class="container">
+
+  <div class="toc">
+    <h2>📋 Contents</h2>
+    <ol>
+      <li><a onclick="document.getElementById('acceptance').scrollIntoView({behavior:'smooth'})">එකඟතාව / Acceptance</a></li>
+      <li><a onclick="document.getElementById('app').scrollIntoView({behavior:'smooth'})">App භාවිතය / App Use</a></li>
+      <li><a onclick="document.getElementById('account').scrollIntoView({behavior:'smooth'})">ගිණුම / Account</a></li>
+      <li><a onclick="document.getElementById('netsabawa').scrollIntoView({behavior:'smooth'})">NetSabawa නීති / Rules</a></li>
+      <li><a onclick="document.getElementById('ip').scrollIntoView({behavior:'smooth'})">බුද්ධිමය දේපළ / IP</a></li>
+      <li><a onclick="document.getElementById('disclaimer').scrollIntoView({behavior:'smooth'})">වගකීම් සීමා / Disclaimer</a></li>
+      <li><a onclick="document.getElementById('termination').scrollIntoView({behavior:'smooth'})">ගිණුම් අත්හිටුවීම / Termination</a></li>
+      <li><a onclick="document.getElementById('governing').scrollIntoView({behavior:'smooth'})">නීතිය / Governing Law</a></li>
+      <li><a onclick="document.getElementById('changes').scrollIntoView({behavior:'smooth'})">වෙනස්කම් / Changes</a></li>
+      <li><a onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">සම්බන්ධ වන්න / Contact</a></li>
+    </ol>
+  </div>
+
+  <!-- 1. Acceptance -->
+  <section id="acceptance">
+    <h2><span class="icon">✅</span> එකඟතාව / Acceptance of Terms</h2>
+    <p>
+      <strong>NetWedha</strong> app download කිරීමෙන්, install කිරීමෙන්, හෝ භාවිතා කිරීමෙන් ඔබ මෙම Terms and Conditions වලට සම්පූර්ණයෙන් එකඟ වෙයි.
+    </p>
+    <p>
+      <em>By downloading, installing, or using NetWedha, you fully agree to these Terms and Conditions. If you do not agree, please uninstall and discontinue use of the app immediately.</em>
+    </p>
+    <div class="info-box warning">
+      <strong>⚠️ වයස සීමාව / Age Restriction</strong>
+      NetWedha app භාවිතා කිරීම සඳහා ඔබේ වයස අවුරුදු 13 හෝ ඊට වැඩි විය යුතුය. වයස 18 ට අඩු නම් දෙමව්පියන්ගේ අනුමැතිය අවශ්‍ය වේ.
+    </div>
+  </section>
+
+  <!-- 2. App Use -->
+  <section id="app">
+    <h2><span class="icon">📱</span> App භාවිතය / Permitted Use</h2>
+    <p>NetWedha app පුද්ගලික, වාණිජ නොවන අරමුණු සඳහා පමණක් භාවිතා කළ හැකිය.</p>
+
+    <div class="do-dont">
+      <div class="do-card">
+        <h4>✓ කළ හැකි දේ / Allowed</h4>
+        <ul>
+          <li>Network speed test කිරීම</li>
+          <li>Signal strength check කිරීම</li>
+          <li>NetSabawa හිදී content share කිරීම</li>
+          <li>News කියවීම</li>
+          <li>GPS test කිරීම</li>
+          <li>Files download කිරීම</li>
+        </ul>
+      </div>
+      <div class="dont-card">
+        <h4>✕ නොකළ යුතු දේ / Not Allowed</h4>
+        <ul>
+          <li>App reverse engineer කිරීම</li>
+          <li>App modify හෝ hack කිරීම</li>
+          <li>Automated bots use කිරීම</li>
+          <li>Others' accounts access කිරීම</li>
+          <li>Illegal activities සඳහා use කිරීම</li>
+          <li>Spam හෝ malware spread කිරීම</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="info-box danger">
+      <strong>🚨 Violation</strong>
+      මෙම terms violate කළ හොත් ඔබේ account කිසිදු notice එකක් නොමැතිව suspend හෝ permanently ban කළ හැකිය.
+    </div>
+  </section>
+
+  <!-- 3. Account -->
+  <section id="account">
+    <h2><span class="icon">👤</span> ගිණුම / Your Account</h2>
+    <p>NetSabawa community access කිරීම සඳහා account එකක් create කළ හැකිය.</p>
+    <ul class="policy-list">
+      <li>ඔබේ account credentials (password) සුරක්ෂිතව තබා ගැනීම ඔබේ වගකීමකි</li>
+      <li>Account එකක් create කිරීම සඳහා valid email address එකක් දීම අවශ්‍ය වේ</li>
+      <li>ඔබේ account හරහා සිදු වන සියලු activities සඳහා ඔබ වගකිව යුතුය</li>
+      <li>Account share කිරීම හෝ transfer කිරීම තහනම්</li>
+      <li>Suspicious activity detect වුනහොත් account temporarily lock කළ හැකිය</li>
+    </ul>
+    <div class="info-box info">
+      <strong>📌 Google Sign-In</strong>
+      Google account ඔස්සේ login කළ හොත් Google ගේ Terms of Service ද අදාළ වේ.
+    </div>
+  </section>
+
+  <!-- 4. NetSabawa -->
+  <section id="netsabawa">
+    <h2><span class="icon">🌐</span> NetSabawa Community නීති</h2>
+    <p>NetSabawa යනු NetWedha app හි community platform එකයි. සියලු users මෙම නීති පිළිපැදිය යුතුය:</p>
+
+    <div class="do-dont">
+      <div class="do-card">
+        <h4>✓ Share කළ හැකි දේ</h4>
+        <ul>
+          <li>Network tips සහ tricks</li>
+          <li>Sri Lanka tech news</li>
+          <li>Helpful screenshots</li>
+          <li>Speed test results</li>
+          <li>Constructive feedback</li>
+        </ul>
+      </div>
+      <div class="dont-card">
+        <h4>✕ Share නොකළ යුතු දේ</h4>
+        <ul>
+          <li>Hate speech හෝ racism</li>
+          <li>Pornographic content</li>
+          <li>Personal info of others</li>
+          <li>Fake news හෝ misinformation</li>
+          <li>Copyright content</li>
+          <li>Violent හෝ threatening content</li>
+        </ul>
+      </div>
+    </div>
+
+    <p>NetWedha team ට rules violate කරන content remove කිරීමට සහ accounts suspend කිරීමට අයිතිය ඇත.</p>
+
+    <div class="info-box warning">
+      <strong>⚠️ Content Ownership</strong>
+      ඔබ NetSabawa හිදී post කරන content සඳහා ඔබ වගකිව යුතුය. Post කළ content NetWedha platform හිදී display කිරීමට permission ලබා දෙනු ලැබේ.
+    </div>
+  </section>
+
+  <!-- 5. IP -->
+  <section id="ip">
+    <h2><span class="icon">©️</span> බුද්ධිමය දේපළ / Intellectual Property</h2>
+    <p>
+      NetWedha app, logo, design, code, සහ content සියල්ල NetWedha developers ගේ intellectual property වේ.
+    </p>
+    <ul class="policy-list">
+      <li>App copy, modify, distribute හෝ sell කිරීම තහනම්</li>
+      <li>NetWedha logo හෝ brand name permission නොමැතිව භාවිතා කිරීම තහනම්</li>
+      <li>App decompile හෝ reverse engineer කිරීම strictly prohibited</li>
+      <li>Third-party libraries (Mapbox, Firebase etc.) ඔවුන්ගේ respective licenses යටතේ පවතී</li>
+    </ul>
+    <div class="info-box info">
+      <strong>📌 Open Source</strong>
+      App හිදී use කරන open source components ඒවාගේ respective licenses (Apache 2.0, MIT etc.) යටතේ available වේ.
+    </div>
+  </section>
+
+  <!-- 6. Disclaimer -->
+  <section id="disclaimer">
+    <h2><span class="icon">⚖️</span> වගකීම් සීමා / Disclaimer & Liability</h2>
+    <p>NetWedha app "as is" basis එකක් මත provide කෙරේ.</p>
+    <ul class="policy-list">
+      <li>Speed test results approximate values — actual network performance vary විය හැකිය</li>
+      <li>Signal strength readings device hardware සහ location අනුව differ විය හැකිය</li>
+      <li>App use කිරීමෙන් ඇතිවිය හැකි data charges සඳහා NetWedha වගකිව නොයුතුය</li>
+      <li>Third-party services (Mapbox, Firebase) downtime හෝ errors සඳහා NetWedha වගකිව නොයුතුය</li>
+      <li>NetSabawa හිදී users post කරන content සඳහා NetWedha directly වගකිව නොයුතුය</li>
+    </ul>
+    <div class="info-box danger">
+      <strong>🚨 No Warranty</strong>
+      NetWedha app uninterrupted, error-free, හෝ completely secure වනු ඇතැයි guarantee නොකෙරේ. App use කිරීම ඔබේ own risk එකේ.
+    </div>
+  </section>
+
+  <!-- 7. Termination -->
+  <section id="termination">
+    <h2><span class="icon">🚫</span> ගිණුම් අත්හිටුවීම / Account Termination</h2>
+    <p>පහත අවස්ථා වලදී ඔබේ account suspend හෝ terminate කළ හැකිය:</p>
+    <ul class="policy-list">
+      <li>Terms and Conditions violate කළ හොත්</li>
+      <li>NetSabawa community rules break කළ හොත්</li>
+      <li>Fraudulent activity detect වුනහොත්</li>
+      <li>Legal requirement එකක් නිසා</li>
+      <li>ඔබ request කළ හොත් (account deletion)</li>
+    </ul>
+    <p>ඔබට ඕනෑ වේලාවක app settings හිදී ඔබේ account delete කළ හැකිය. Account delete කළ හොත් ඔබේ data 30 days ඇතුළත permanently remove කෙරේ.</p>
+  </section>
+
+  <!-- 8. Governing Law -->
+  <section id="governing">
+    <h2><span class="icon">🏛️</span> නීතිය / Governing Law</h2>
+    <p>
+      මෙම Terms and Conditions <strong>Sri Lanka</strong> ගේ නීති යටතේ govern කෙරේ. ඕනෑම dispute එකක් Sri Lanka ගේ courts හිදී resolve කෙරේ.
+    </p>
+    <div class="info-box info">
+      <strong>📌 International Users</strong>
+      Sri Lanka ට පිටතින් app use කරන users ද Sri Lanka laws යටතේ මෙම terms accept කරනු ලැබේ.
+    </div>
+  </section>
+
+  <!-- 9. Changes -->
+  <section id="changes">
+    <h2><span class="icon">📝</span> වෙනස්කම් / Changes to Terms</h2>
+    <p>
+      NetWedha team ට ඕනෑ වේලාවක මෙම Terms update කිරීමේ අයිතිය ඇත. Significant changes වූ විට:
+    </p>
+    <ul class="policy-list">
+      <li>App notification ඔස්සේ ඔබව දැනුවත් කෙරේ</li>
+      <li>GitHub repository හිදී updated version publish කෙරේ</li>
+      <li>Effective date update කෙරේ</li>
+    </ul>
+    <p>Changes publish කළ පසු app continue use කිරීම new terms accept කිරීමක් ලෙස සැලකේ.</p>
+  </section>
+
+  <!-- 10. Contact -->
+  <section id="contact">
+    <h2><span class="icon">📬</span> සම්බන්ධ වන්න / Contact Us</h2>
+    <div class="contact-card">
+      <h3>NetWedha – Developer</h3>
+      <p style="color:var(--muted); font-size:14px; margin: 8px 0 16px;">
+        Terms සම්බන්ධ ඕනෑම ප්‍රශ්නයක් සඳහා contact කරන්න:
+      </p>
+      <p>📧 <a href="mailto:support@netwedha.lk">support@netwedha.lk</a></p>
+      <p style="margin-top:8px;">🐙 <a href="https://github.com/sripci/netwedha" target="_blank">github.com/sripci/netwedha</a></p>
+      <p style="margin-top: 16px; font-size: 13px; color: var(--muted);">Response time: 3–5 business days</p>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <p>© 2025 NetWedha · <code>com.sripci.netvistasl</code></p>
+  <p style="margin-top:6px;">Last updated: June 2025 · Version 2.03.1</p>
+</footer>
+
+</body>
+</html>
